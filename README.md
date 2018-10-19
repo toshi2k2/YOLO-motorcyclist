@@ -4,6 +4,9 @@ First, shapefiles are read and road intersection coordinates are collected, whic
 Collect data by using image_data_generation.py file by running following commands:
 
 Download your shapefile and put the roads.shp file in folder called data
+
 $ pip install -r requirements.txt
+
 $ python combine.py --sf ./data/roads.shp --sr True --saveI True --image True
+
 Run the help function to see all functionalities
