@@ -12,7 +12,7 @@ import argparse
 import streetview
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--sf', required=True, help='shapefile name with path')
+parser.add_argument('--sf', required=True, help='shapefile name with path to roads.shp file')
 parser.add_argument('--sr', type=bool, help='save roads data if true', default=False)
 
 parser.add_argument('--I', type=bool, default=False, help='define whether to use all roads for intersection of not - if true, then define Idata')
