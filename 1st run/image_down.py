@@ -45,7 +45,7 @@ coordinates = ';'.join(my_list)
 #       'location': coordinates,
 #       'heading': 0,
 #       'pitch': '0',
-#       'key': 'AIzaSyAnP2nnuWAxR3Ync0AKsUBNM6hh4axKw0w'
+#       'key': ''
 #     }]
 #
 #     # Create a results object
@@ -64,12 +64,12 @@ coordinates = ';'.join(my_list)
 #     results.save_metadata('metadata.json')
 
 # apiargs = {
-#   'location': coordinates,#'23.87,90.3939;23.87,90.3944;23.87,90.3951;23.87,90.3959',
+#   'location': coordinates,#'',
 #   'size': '400x400',
 #   'heading': '0;90;180;270',
 #     'fov': '90',
 #   'pitch': '0',
-#   'key': 'AIzaSyAnP2nnuWAxR3Ync0AKsUBNM6hh4axKw0w'
+#   'key': ''
 # }
 #
 # # Get a list of all possible queries from multiple parameters
