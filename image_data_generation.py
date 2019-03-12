@@ -10,13 +10,14 @@ import google_streetview.api
 import google_streetview.helpers
 import argparse
 import streetview
+import random
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--sf', required=True, help='shapefile name with path to roads.shp file')
+parser.add_argument('--sf', required=False, help='shapefile name with path to roads.shp file')
 parser.add_argument('--sr', type=bool, help='save roads data if true', default=False)
 
 parser.add_argument('--I', type=bool, default=False, help='define whether to use all roads for intersection of not - if true, then define Idata')
-parser.add_argument('--Idata', type=int, default=1000, help='number of roads coordinates to be used')
+parser.add_argument('--Idata', type=int, default=5000, help='number of roads coordinates to be used')
 parser.add_argument('--saveI', type=bool, help='save intersection data if true', default=False)
 parser.add_argument('--loadI', type=bool, help='loading a intersections file pickle', default=False)
 parser.add_argument('--Ifile', required=False, help='name of intersections pickle file with path')
@@ -25,7 +26,7 @@ parser.add_argument('--pan', type=bool, help='run panorama history function', de
 
 parser.add_argument('--image', type=bool, help='image download argument', default=False)
 parser.add_argument('--api', required=False, help='api key', default='')
-parser.add_argument('--size', required=False, help='size of image', default='400x400')
+parser.add_argument('--size', required=False, help='size of image', default='2048x2048')
 parser.add_argument('--heading', required=False, help='heading', default='0;90;180;270')
 parser.add_argument('--fov', required=False, help='field of view', default='90')
 parser.add_argument('--d', required=False, help='downloads folder', default='./downloads')
@@ -63,7 +64,7 @@ def get_intersections(roads):
                 intersections.append(Point(last_coords[0], last_coords[1]))
     return unary_union(intersections)
 ######################################################################################################################
-roads_shp_path = opt.sf
+roads_shp_path = './Bangkok.osm.shp/Bangkok-shp/shape/roads.shp'
 
 shp_file = fiona.open(roads_shp_path)
 roads = []
@@ -79,7 +80,10 @@ if opt.sr == True:
 
 if opt.loadI == False:
     if opt.I == True:
-        intersection = get_intersections(roads[1:opt.Idata])
+        # random_road = random.sample(roads, opt.Idata)     #for random selection
+        # # print("random", len(random_road), type(random_road))
+        # intersection = get_intersections(random_road)
+        intersection = get_intersections(roads[10000:10000+opt.Idata])
     else:
         intersection = get_intersections(roads)
 else:
