@@ -30,7 +30,7 @@ print("number of intersections: ",len(intersection))
 # list_arrays = [ np.array((intersections.xy[0][0], intersections.xy[1][0])) for intersections in intersection ] #passing intersection coordinates to a list <long, lat> format
 
 if opt.image==True:
-    list_arrays = np.vstack(intersection[0:10])
+    list_arrays = np.vstack(intersection)
     list_arrays[:,[0, 1]] = list_arrays[:,[1, 0]] #exchanging columns
     # print(list_arrays)
     # print("length: ",type(list_arrays))
