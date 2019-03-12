@@ -101,7 +101,7 @@ if opt.saveI == True:
     # with open('bangkok_intersections.txt', 'r') as f:   #opens the above file as list of string
     #     my_list = [line.rstrip('\n') for line in f]
 
-        with open('intersections_data', 'wb') as f:    #quick pickle save
+    with open('intersections_data', 'wb') as f:    #quick pickle save
             pickle.dump(list_arrays, f)
     #
     # with open('bangkok_intersections', 'rb') as f:    #pickle load function for reference
