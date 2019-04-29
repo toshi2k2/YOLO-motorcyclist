@@ -53,6 +53,7 @@ if opt.image==True:
 
     # Get a list of all possible queries from multiple parameters
     api_list = google_streetview.helpers.api_list(apiargs)
+    print(len(api_list), type(api_list), api_list[0])
 
     # Create a results object for all possible queries
     results = google_streetview.api.results(api_list)
