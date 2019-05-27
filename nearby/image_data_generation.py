@@ -25,7 +25,7 @@ parser.add_argument('--Ifile', required=False, help='name of intersections pickl
 parser.add_argument('--pan', type=bool, help='run panorama history function', default=False)
 
 parser.add_argument('--image', type=bool, help='image download argument', default=False)
-parser.add_argument('--api', required=False, help='api key', default='AIzaSyAnP2nnuWAxR3Ync0AKsUBNM6hh4axKw0w')
+parser.add_argument('--api', required=False, help='api key', default='')
 parser.add_argument('--size', required=False, help='size of image', default='2048x2048')
 parser.add_argument('--heading', required=False, help='heading', default='0;90;180;270')
 parser.add_argument('--fov', required=False, help='field of view', default='90')
