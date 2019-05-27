@@ -7,6 +7,4 @@ Download your shapefile and put the roads.shp file in folder called data
 
 $ pip install -r requirements.txt
 
-$ python combine.py --sf ./data/roads.shp --sr True --saveI True --image True
-
-Run the help function to see all functionalities
+$ python image_data_generation.py -h
