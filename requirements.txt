@@ -1,5 +1,5 @@
 Fiona == 1.7.10
 Shapely == 1.6.4.post1
 google_streetview == 1.2.4
-numpy == 1.15.1
+numpy == 1.22.0
 streetview == 0.1
